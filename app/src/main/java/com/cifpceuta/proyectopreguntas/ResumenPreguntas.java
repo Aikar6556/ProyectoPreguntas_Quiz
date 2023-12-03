@@ -6,6 +6,10 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -17,12 +21,15 @@ public class ResumenPreguntas extends AppCompatActivity {
     int resultado;
     int contador;
 
+    private ImageButton volver;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.finalizado_layout);
         result=(TextView) findViewById(R.id.tvResultado);
+        volver = findViewById(R.id.volver);
 
         Intent i = this.getIntent();
 
@@ -32,6 +39,18 @@ public class ResumenPreguntas extends AppCompatActivity {
         contador = i.getIntExtra("contador",0);
 
         Preguntas[] preguntas = (Preguntas[])getIntent().getSerializableExtra("preguntasArray");
+
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                    // Código para cambiar a otra actividad al presionar el botón
+                    Intent intent = new Intent(ResumenPreguntas.this, MainActivity.class);
+                    startActivity(intent);
+
+            }
+        });
 
 
 

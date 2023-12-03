@@ -22,8 +22,10 @@ public class MainActivity extends AppCompatActivity {
     private Button siguiente;
 
 
+
+
     private Preguntas[] preguntas = {
-            new Preguntas("¿Cual es la capital de Francia? ", "El cairo", "Francia", "Inflater", 1),
+            new Preguntas("¿Cual es la capital de Francia? ", "Paris", "El Cairo", "Inflater", 1),
             new Preguntas("¿Qué es el titanic?", "Un barco", "Un señor", "Un plato de puchero", 1),
             new Preguntas("¿Donde se situa la estatua de la libertad?", "Marruecos", "Móstoles", "EEUU", 1),
             new Preguntas("¿Cual fue el primer Smartphone?", "Honda", "Apple", "Modas Paqui", 2),
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         radioButton2 = findViewById(R.id.radioButton2);
         radioButton3 = findViewById(R.id.radioButton3);
         siguiente = findViewById(R.id.botonSiguiente);
+
         siguientePregunta();
 
         siguiente.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void siguientePregunta() {
-        contadorPregunta.setText("Num" + (cont + 1));
+        contadorPregunta.setText("Pregunta Num: " + (cont + 1)+" de "+preguntas.length );
         pregunta.setText(preguntas[cont].getPregunta());
         radioButton1.setText(preguntas[cont].getRespuesta1());
         radioButton2.setText(preguntas[cont].getRespuesta2());
@@ -116,6 +119,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
 
     }
+
+
+
+
 
 
 

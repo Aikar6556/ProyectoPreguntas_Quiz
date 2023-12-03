@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="15dp"
-    android:background="@color/personal1"
+    android:background="@color/claro1"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,14 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contador"
+        android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintHorizontal_bias="0.872"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/black"
-        app:layout_constraintVertical_bias="0.755" />
+        app:layout_constraintVertical_bias="0.059" />
 
     <TextView
         android:id="@+id/pregunta"
@@ -29,25 +29,27 @@
         android:gravity="center"
         android:text="Pregunta"
         android:textAlignment="center"
-        android:textSize="26dp"
         android:textColor="@color/black"
+        android:textSize="26dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.446"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintVertical_bias="0.173" />
 
     <RadioGroup
         android:id="@+id/grupoBoton"
         android:layout_width="265dp"
         android:layout_height="288dp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/botonSiguiente"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@+id/pregunta">
+        app:layout_constraintTop_toBottomOf="@+id/pregunta"
+        app:layout_constraintVertical_bias="0.527">
 
         <RadioButton
             android:id="@+id/radioButton2"
@@ -75,15 +77,15 @@
 
     <Button
         android:id="@+id/botonSiguiente"
-        android:layout_width="177dp"
-        android:layout_height="74dp"
+        android:layout_width="232dp"
+        android:layout_height="101dp"
 
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="64dp"
         android:text="Siguiente"
         android:textSize="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent" />
 
 
